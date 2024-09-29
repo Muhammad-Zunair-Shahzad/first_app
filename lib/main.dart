@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: Scaffold(body: MyClass()),
+    home: Scaffold(body: SafeArea(child: MyClass())),
   ));
 }
 
@@ -11,55 +12,32 @@ class MyClass extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // decide inner col pos
-          children: [
-            const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-               Text(
-              "DICE ROLL APP", 
-              style: TextStyle(
-                fontSize: 30
-              ),
-            ),
-               Text(
-              "This app is about dice", 
-              style: TextStyle(
-                fontSize: 12
-              ),
-            ),
-              ],
-            ),
-            Expanded(
-              child: ListView(
-                scrollDirection: Axis.vertical,
-                children: [
-                  ListTile(
-                    title: Row(
-                      children: [
-                    Image.asset("assets/images/bird.png", height: 100,),
-                    const SizedBox(width: 40,),
-                    const Text('1st Image'),
-                      ]
-                    ),
-                  ),
-                  ListTile(
-                    leading: Image.asset("assets/images/bird.png", height: 100,),
-                    title: const Text('2nd Image'),
-                  ),
-                  ListTile(
-                    leading: Image.asset("assets/images/bird.png", height: 100,),
-                    title: const Text('3rd Image'),
-                  )
-                ],
-              ),
-            ),
-        ],
-      ),
-    ),
-  );
+    return VStack(
+      axisSize: MainAxisSize.max,
+      [
+                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered(),
+        ).color(Colors.green).square(100).make(),
+
+                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
+        ).color(Colors.blue).square(100).make(),
+
+                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
+        ).color(Colors.red).square(100).make(),
+
+                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
+        ).color(Colors.orange).square(100).make(),
+
+                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
+        ).color(Colors.pink).square(100).make(),
+
+                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
+        ).color(Colors.cyan).square(100).make(),
+
+                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
+        ).color(Colors.deepPurple).square(100).make(),
+        
+                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
+        ).color(Colors.grey).square(100).make().expand(),
+      ],
+    ).pOnly(left: 20.0);
 }}
