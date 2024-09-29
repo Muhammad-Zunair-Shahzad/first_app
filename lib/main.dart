@@ -48,7 +48,7 @@ class MyClass extends StatelessWidget {
           ]
         ),
         VStack(
-          alignment: MainAxisAlignment.center,
+          alignment: MainAxisAlignment.center, 
           [
              VStack(
                 crossAlignment: CrossAxisAlignment.stretch,
@@ -118,8 +118,7 @@ class MyClass extends StatelessWidget {
 }}
 
 
-            // "In VStack 1 ".text.bold.xl.color(Colors.white).makeCentered()
-            // .box.color(Colors.blueGrey).square(100).makeCentered(),
-
-            // "In VStack 2 ".text.bold.xl.color(Colors.white).makeCentered()
-            // .box.color(Colors.red).square(100).makeCentered(),
+// For the 1st column and row, must max it size (default size is min)
+// For the inner columns use expand always
+// Now either you max the size of row or column, nothing will work, so use alignment center
+// to cover the remaining screen (see the + sinn on the screen)
