@@ -15,29 +15,111 @@ class MyClass extends StatelessWidget {
     return VStack(
       axisSize: MainAxisSize.max,
       [
-                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered(),
-        ).color(Colors.green).square(100).make(),
+        HStack(
+          axisSize: MainAxisSize.max,
+          [
+            "HStack 1".text.bold.xl.color(Colors.white).makeCentered()
+            .box.color(Colors.deepPurple).square(100).make(),
 
-                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
-        ).color(Colors.blue).square(100).make(),
+            "HStack 2".text.bold.xl.color(Colors.white).makeCentered()
+            .box.color(Colors.yellow).square(100).make(),
 
-                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
-        ).color(Colors.red).square(100).make(),
+            "HStack 3".text.bold.xl.color(Colors.white).makeCentered()
+            .box.color(Colors.black).square(100).make(),
 
-                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
-        ).color(Colors.orange).square(100).make(),
+            "HStack 4".text.bold.xl.color(Colors.white).makeCentered()
+            .box.color(Colors.yellow).square(100).make().expand(),
+          ]
+        ),
+        HStack(
+          axisSize: MainAxisSize.max,
+          [
+            "HStack 5".text.bold.xl.color(Colors.white).makeCentered()
+            .box.color(Colors.red).square(100).make(),
 
-                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
-        ).color(Colors.pink).square(100).make(),
+            "HStack 6".text.bold.xl.color(Colors.white).makeCentered()
+            .box.color(Colors.blue).square(100).make(),
 
-                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
-        ).color(Colors.cyan).square(100).make(),
+            "HStack 7".text.bold.xl.color(Colors.white).makeCentered()
+            .box.color(Colors.grey).square(100).make(),
 
-                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
-        ).color(Colors.deepPurple).square(100).make(),
-        
-                VxBox( child: "VxBox".text.xl.align(TextAlign.center).color(Colors.white).bold.make().centered()
-        ).color(Colors.grey).square(100).make().expand(),
+            "HStack 8".text.bold.xl.color(Colors.white).makeCentered()
+            .box.color(Colors.blueGrey).square(100).make().expand(),
+          ]
+        ),
+        VStack(
+          alignment: MainAxisAlignment.center,
+          [
+             VStack(
+                crossAlignment: CrossAxisAlignment.stretch,
+                [
+                  HStack(
+                    alignment: MainAxisAlignment.spaceBetween,
+                    [
+                      "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                      .box.color(Colors.green).square(100).make(),
+
+                      "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                      .box.color(Colors.green).square(100).make(),
+                    ]
+                  )
+                ]
+              ).expand(),
+            HStack(
+              axisSize: MainAxisSize.max,
+              alignment: MainAxisAlignment.center,
+              [
+                "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                .box.color(Colors.red).square(100).makeCentered(),
+              ]
+            ).expand(),
+             HStack(
+              axisSize: MainAxisSize.max,
+              alignment: MainAxisAlignment.center,
+              [
+                "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                .box.color(Colors.red).square(100).makeCentered(),
+
+                "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                .box.color(Colors.blue).square(100).makeCentered(),
+
+                "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                .box.color(Colors.red).square(100).makeCentered(),
+              ]
+            ).expand(),
+            HStack(
+              axisSize: MainAxisSize.max,
+              alignment: MainAxisAlignment.center,
+              [
+                "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                .box.color(Colors.red).square(100).makeCentered(),
+              ]
+            ).expand(),
+            
+            VStack(
+                crossAlignment: CrossAxisAlignment.stretch,
+                [
+                  HStack(
+                    alignment: MainAxisAlignment.spaceBetween,
+                    [
+                      "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                      .box.color(Colors.green).square(100).make(),
+
+                      "In VStack 3 ".text.bold.xl.color(Colors.white).makeCentered()
+                      .box.color(Colors.green).square(100).make(),
+                    ]
+                  )
+                ]
+              ),
+          ]
+        ).expand(),
       ],
-    ).pOnly(left: 20.0);
+    ).pLTRB(20, 20, 20, 20);
 }}
+
+
+            // "In VStack 1 ".text.bold.xl.color(Colors.white).makeCentered()
+            // .box.color(Colors.blueGrey).square(100).makeCentered(),
+
+            // "In VStack 2 ".text.bold.xl.color(Colors.white).makeCentered()
+            // .box.color(Colors.red).square(100).makeCentered(),
