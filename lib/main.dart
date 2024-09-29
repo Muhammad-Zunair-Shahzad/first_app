@@ -122,3 +122,4 @@ class MyClass extends StatelessWidget {
 // For the inner columns use expand always
 // Now either you max the size of row or column, nothing will work, so use alignment center
 // to cover the remaining screen (see the + sinn on the screen)
+// cross axis of inner column and main axis of inner rows doenot work so use stech techninque
